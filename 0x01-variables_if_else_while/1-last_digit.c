@@ -4,9 +4,12 @@
 
 /**
  * main - Entry point
- * Description: This program prints the last digit of the number stored in the variable n.
+ *
+ * Description: print the value of n status:
+ *              greater than, is zero and is not less than 6.
+ *
  * Return: Always O (Success)
- */
+*/
 int main(void)
 {
 	int n, digit;
