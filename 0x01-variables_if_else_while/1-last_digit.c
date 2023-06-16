@@ -3,7 +3,9 @@
 #include <stdio.h>
 
 /**
- * This program prints the last digit of the number stored in the variable n.
+ * main - Entry point
+ * Description: This program prints the last digit of the number stored in the variable n.
+ * Return: Always O (Success)
  */
 int main(void)
 {
