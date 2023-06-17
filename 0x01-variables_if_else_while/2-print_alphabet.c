@@ -10,14 +10,14 @@
 
 int main(void)
 {
+char t[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	int i;
-	char t[26] = "abcdefghijklmnopqrstuvwxyz";
 
-	for (i = 0 ; i < 26 ; i++)
+	for (i = 0; i < 52; i++)
 	{
 		putchar(t[i]);
 	}
 	putchar('\n');
-
 	return (0);
 }
+
