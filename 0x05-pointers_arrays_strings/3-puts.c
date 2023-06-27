@@ -1,19 +1,22 @@
 #include "main.h"
 
 /**
-  * _strlen - Returns the length of a string
-  * @s: String to count
+  * _strcpy - Copy a string
+  * @dest: Destination value
+  * @src: Source value
   *
-  * Return: String length
+  * Return: the pointer to dest
   */
-int _strlen(char *s)
+char *_strcpy(char *dest, char *src)
 {
-	int c = 0;
+	int i;
 
-	for (; *s != '\0'; s++)
+	for (i = 0; src[i] != '\0'; i++)
 	{
-		c++;
+		dest[i] = src[i];
 	}
 
-	return (c);
+	dest[i++] = '\0';
+
+	return (dest);
 }
