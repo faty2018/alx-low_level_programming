@@ -1,13 +1,16 @@
-#include "main.h"
+#include"main.h"
+
 /**
- * create_file -creates an array of chars, and initializes
+ *append_text_to_file - appends text at the end of a file
+ *@filename: A pointer to the name of the file.
+ *@text_content: The string to add to the end of the file.
  *
- * @text_content: is a NULL terminated string to write to the file
- * @filename: is the name of the file to create
- *
- * Return: 1 on success, -1 on failure
+ *Return: If the function fails or filename is NULL -1
+ *	if the file does not exist the user lacks write permissions -1
+ *	otherwise 1
  */
-int create_file(const char *filename, char *text_content)
+
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int o, w, len = 0;
 
@@ -20,7 +23,7 @@ int create_file(const char *filename, char *text_content)
 			len++;
 	}
 
-	o = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
+	o = open(filename, O_WRONLY | O_APPEND);
 	w = write(o, text_content, len);
 
 	if (o == -1 || w == -1)
